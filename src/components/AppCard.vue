@@ -10,8 +10,11 @@ export default {
 <template>
   <div class="ms-card text-center p-2">
      <img :src='cardInfo.card_images[0].image_url_small' alt="logo">
-     <h5> {{ cardInfo.name }}</h5>
-     <h6>{{ cardInfo.archetype }}</h6>
+     <div class="mt-2">
+         <h5> {{ cardInfo.name }}</h5>
+         <h6>{{ cardInfo.archetype }}</h6>
+     </div>
+
   </div>
 </template>
 
