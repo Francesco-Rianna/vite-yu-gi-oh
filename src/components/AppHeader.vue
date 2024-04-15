@@ -4,7 +4,8 @@ export default {
 }
 </script>
 <template>
-    <div class="title p-1">
+    <div class="title p-1 d-flex gap-2">
+        <img src="../assets/img/logo.webp" alt="logo">
         <h1>Yu-Gi-Oh-Api</h1>
     </div>
 </template>
@@ -16,5 +17,7 @@ export default {
 
 }h1 {
     font-size: 30px;
+} img {
+    width: 100px;
 }
 </style>
