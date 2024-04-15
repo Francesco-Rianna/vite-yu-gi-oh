@@ -1,15 +1,24 @@
 <script >
+import AppHeader from './components/AppHeader.vue'
+export default {
+  components : {
+    AppHeader
+
+  } 
+}
 
 </script>
 
 <template>
-  <div class="ms-container">
-    Ciao
-  </div>
+  <header>
+    <AppHeader></AppHeader>
+  </header>
+
+  
  
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use './style/generic' ;
   
 </style>
