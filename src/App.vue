@@ -3,9 +3,13 @@
 </script>
 
 <template>
+  <div class="ms-container">
+    Ciao
+  </div>
  
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+@use './style/generic' ;
+  
 </style>
