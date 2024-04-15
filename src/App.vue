@@ -1,4 +1,5 @@
 <script >
+import {store} from './store.js'
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 export default {
@@ -7,7 +8,22 @@ export default {
     AppMain, 
     
 
-  } 
+  } ,
+  data () {
+    return{
+      store
+    }
+  },
+  methods :{
+    getCardFromApi(){
+      
+
+    }
+  },
+  mounted(){
+    this.getCardFromApi();
+
+  }
 }
 
 </script>
@@ -15,6 +31,7 @@ export default {
 <template>
   <header>
     <AppHeader></AppHeader>
+    
   </header>
   <main>
     <AppMain>
