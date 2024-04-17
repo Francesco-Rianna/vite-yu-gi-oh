@@ -25,6 +25,9 @@ export default {
         num :20,
         offset: 0
       }
+      if(store.utentSelect!==''){
+        queryParams.archetype=store.utentSelect
+      }
       axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
         params : queryParams
       })
@@ -52,7 +55,7 @@ export default {
     
     
   <main>
-    <AppSelect></AppSelect>
+    <AppSelect @searchDone="getCardFromApi"></AppSelect>
     <AppMain v-if="!store.isLoading"></AppMain>
     <AppLoader v-else></AppLoader>
   </main>
