@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-   <div>Hai trovato {{store.cards.length}} carte </div>
+   <div v-if="store.utentSelect!=''">Hai trovato {{store.cards.length}} carte </div>
 </template>
 
 <style lang="scss">
