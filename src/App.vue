@@ -4,10 +4,13 @@ import {store} from './store.js'
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 import AppLoader from './components/AppLoader.vue'
+import AppSelect from './components/AppSelect.vue'
 export default {
   components : {
     AppHeader ,
     AppMain, 
+    AppLoader,
+    AppSelect
     
 
   } ,
@@ -18,7 +21,13 @@ export default {
   },
   methods :{
     getCardFromApi(){
-      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
+      const queryParams= {
+        num :20,
+        offset: 0
+      }
+      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
+        params : queryParams
+      })
       .then((response) => {
         store.cards= response.data.data
         store.isLoading=false
@@ -39,9 +48,11 @@ export default {
 <template>
   <header>
     <AppHeader></AppHeader>
-    
   </header>
+    
+    
   <main>
+    <AppSelect></AppSelect>
     <AppMain v-if="!store.isLoading"></AppMain>
     <AppLoader v-else></AppLoader>
   </main>
